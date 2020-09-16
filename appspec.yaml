@@ -4,9 +4,7 @@ services:
 - build_command: |-
     curl -sLOS https://github.com/openfaas/faas-cli/releases/download/0.12.9/faas-cli > faas-cli
     chmod +x faas-cli
-    faas-cli build --shrinkwrap -f stock.yml
-
-    faas-cli build -f stock.yml
+    faas-cli build --shrinkwrap -f stack.yml
   github:
     branch: master
     deploy_on_push: true

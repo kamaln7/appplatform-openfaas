@@ -1,20 +1,17 @@
 # appplatform-openfaas
 
-OpenFaaS AppPlatform example
+OpenFaaS App Platform example
 
-## Automated example using build command
+## Automated example
 
-Currently doesn't work.
+Fork the repo and replace `kamaln7` with your name in `.do/spec.yaml`.
 
-See [appspec.yaml](appspec.yaml)
+Create an App Platform app using the spec:
 
-## Manual example using shrinkwrap
+```
+doctl apps create --spec .do/spec.yaml
+```
 
-Pros:
-- works
+Alternatively, create a new app through the cloud control panel and select your forked repo and the "webhook-audit" branch.
 
-Cons:
-- have to run shrinkwrap manually
-- need to check in shrinkwrapped code to the root of the GitHub repo
-
-[Go microservice](https://github.com/teamserverless/app-platform-openfaas/)
+Any changes made to the function that are pushed to the `master` branch are built using GitHub Actions and pushed to the "webhook-audit" branch, which is then auto deployed by App Platform.

@@ -1,0 +1,9 @@
+name: openfaas-example
+services:
+  - name: webhook-audit
+    github:
+      repo: kamaln7/appplatform-openfaas
+      branch: webhook-audit
+      deploy_on_push: true
+    dockerfile_path: Dockerfile
+

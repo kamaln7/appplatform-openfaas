@@ -41,5 +41,5 @@ jobs:
           git clean -fd
           cp -a /tmp/build/webhook-audit/. .
           git add -A .
-          git commit -m "webhook-audit $(git rev-parse --short "$GITHUB_SHA")"
+          git commit -m "webhook-audit $(git rev-parse --short "$GITHUB_SHA")" || true
           git push -u origin webhook-audit
